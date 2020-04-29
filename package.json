@@ -1,0 +1,27 @@
+{
+  "name": "myportfolio-website.github.io",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website For My Projects",
+  "main": "index.js",
+  "scripts": {
+    "mySass": "node-sass -w scss/ -o assets/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barhouum7/MyPortfolio-Website.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "modern",
+    "website"
+  ],
+  "author": "BHMBS Ibrahim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barhouum7/MyPortfolio-Website.github.io/issues"
+  },
+  "homepage": "https://github.com/barhouum7/MyPortfolio-Website.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.14.0"
+  }
+}
