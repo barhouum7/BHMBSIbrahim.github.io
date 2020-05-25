@@ -1,7 +1,7 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../dist/imgs/tech/CyberpunkAesthetic.gif);
+$home-image: url(../dist/imgs/Tech/MyFace0.jpg);
 $background-opacity: 0.9;
 
 
@@ -9,12 +9,23 @@ $background-opacity: 0.9;
   transition: all 1s ease-out;
 }
 
+@mixin background {
+  @if $show-home-image {
+    &#bg-image {
+      background-image: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: $primary-color;
+  @include background;
+  background-color: $primary-color;
   color: #fff;
   height: 100%;
   margin: 0;

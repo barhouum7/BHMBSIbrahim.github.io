@@ -2,12 +2,16 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background-color: #444;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
+  body#bg-image {
+    background-image: url(../dist/imgs/Tech/MyFace0.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
 
 h1, h2, h3 {
   margin: 0;
