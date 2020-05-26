@@ -1,7 +1,7 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../dist/imgs/Tech/MyFace0.jpg);
+$home-image: url(../../dist/imgs/Tech/CyberpunkAesthetic.gif);
 $background-opacity: 0.9;
 
 
@@ -12,7 +12,7 @@ $background-opacity: 0.9;
 @mixin background {
   @if $show-home-image {
     &#bg-image {
-      background-image: $home-image;
+      background: $home-image;
       background-attachment: fixed;
       background-size: cover;
     }

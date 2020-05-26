@@ -9,7 +9,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-image {
-    background-image: url(../dist/imgs/Tech/MyFace0.jpg);
+    background: url(../../dist/imgs/Tech/CyberpunkAesthetic.gif);
     background-attachment: fixed;
     background-size: cover; }
 
