@@ -12,7 +12,8 @@ body {
     background: url(../../dist/imgs/Tech/CyberpunkAesthetic.gif);
     background-attachment: fixed;
     background-size: cover; }
-    body#bg-image .overlay {
+    body#bg-image:after {
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
