@@ -5,7 +5,7 @@ In this repo, I will create a **_modern_** and **_responsive_** portfolio websit
 ---
 #### Technologies used 👨‍💻
 - [x] HTML5
-- [x] CSS3: <kbd>Variables</kbd>
+- [x] CSS3: <kbd>FlexBox</kbd>  <kbd>Variables</kbd>
 - [x] Css Preprocessor: <kbd>SASS</kbd>
 - [x] JavaScript
 - [x] NodeJs
