@@ -11,6 +11,14 @@
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 1s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(50deg) translate(5px, 6px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(130deg) translate(-5px, 6px); }
 
 * {
   box-sizing: border-box; }
