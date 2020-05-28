@@ -31,7 +31,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-image {
-    background: url(../../dist/imgs/Tech/CyberpunkAesthetic.gif);
+    background: url(../imgs/Tech/CyberpunkAesthetic.gif);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-image:after {
