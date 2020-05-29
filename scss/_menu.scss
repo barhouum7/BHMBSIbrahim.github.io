@@ -55,6 +55,34 @@
         float: left;
         width: 50%;
         height: 100vh;
+        overflow: hidden;
+    }
+    // Menu Nav Side
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide in From the top
+            transform: translate3d(0, 0 ,0);
+        }
+    }
+    // Branding side Now
+    &-branding {
+        margin: 0;
+        padding: 0;
+        background: $primary-color;
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide in From the bottom
+            transform: translate3d(0, 0, 0);
+        }
 
     }
 }
