@@ -4,6 +4,8 @@ const menu = document.querySelector('.menu')
 const menuNav = document.querySelector('.menu-nav')
 const menuBranding = document.querySelector('.menu-branding')
 const navItems = document.querySelectorAll('.nav-item')
+// const secondarytext = document.querySelector('.secondary-text')
+// const primarytext = document.querySelector('.primary-text')
 
 // Set Initial State Of the Menu
 let showMenu = false
