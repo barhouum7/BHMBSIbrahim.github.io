@@ -17,18 +17,44 @@ body {
 
 // Let's Style The Headings
 
-h1, h2, h3 {
+h1, h2, h3  {
   margin: 0;
   font-weight: 400;
+}
 
-  &.lg-heading {
-    font-size: 6rem;
-  }
-  &.sm-heading {
+$smallHeading-BgColor: rgba(lighten($primary-color, 2), 0.5);
+
+main {
+  .sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    /* Old browsers */
+    background: linear-gradient(to left, $smallHeading-BgColor 50%, rgba(darken($primary-color, 5), 5) 50%);
+    background-size: 1% 50%;
+    background-position: right bottom;
+    @include easeOut;
+    
+    &:hover {
+      background-position: left bottom;
+    }
   }
+  .lg-heading {
+    font-size: 6rem;
+    cursor: pointer;
+    transform: translate3d(0, 0, 0);
+    @include easeOut;
+    &:hover {
+      position: fixed;
+      transform: translateX(100px);
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+      color: $secondary-color;
+    }
+  }
+
 }
 
 a {
@@ -42,7 +68,7 @@ header {
   width: 100%;
 }
 
-.text-secondary {
+.secondary-text {
   color: $secondary-color;
   &:hover {
     color: #fff;
@@ -52,8 +78,14 @@ header {
 }
 
 main {
+  display: grid;
   padding: 4rem;
   height: 100%;
+
+  .not-heading {
+    position: fixed;
+    margin-top: 350px;
+  }
 
   .icons {
     margin-top: 1rem;
@@ -71,7 +103,7 @@ main {
   &#home {
     overflow: hidden;
     h1 {
-      margin-top: 20vh;
+      margin-top: 10vh;
     }
   }
 }
