@@ -30,6 +30,7 @@ main {
     padding: 0.2rem 1rem;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
+    cursor: pointer;
     /* Old browsers */
     background: linear-gradient(to left, $smallHeading-BgColor 50%, rgba(darken($primary-color, 5), 5) 50%);
     background-size: 1% 50%;
@@ -38,6 +39,7 @@ main {
     
     &:hover {
       background-position: left bottom;
+      border: 1px solid #fff;
     }
   }
   .lg-heading {

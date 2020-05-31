@@ -96,6 +96,7 @@ main .sm-heading {
   padding: 0.2rem 1rem;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
+  cursor: pointer;
   /* Old browsers */
   background: linear-gradient(to left, rgba(73, 73, 73, 0.5) 50%, #373737 50%);
   background-size: 1% 50%;
@@ -104,7 +105,8 @@ main .sm-heading {
   -moz-transition: all 1s ease-out;
   transition: all 1s ease-out; }
   main .sm-heading:hover {
-    background-position: left bottom; }
+    background-position: left bottom;
+    border: 1px solid #fff; }
 
 main .lg-heading {
   font-size: 6rem;
