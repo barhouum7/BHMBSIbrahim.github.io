@@ -83,6 +83,31 @@
             // Slide in From the bottom
             transform: translate3d(0, 0, 0);
         }
+        
+        // Branding Side
+        .portrait {
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+            background: $myBrand no-repeat;
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+    }
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
 
+        &.show {
+            // Slide in From Right
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+// Delay Each Nav Item Slide By 0.1s
+@for $i from 1 through 4 {
+    .nav-item:nth-child(#{$i}) {
+        transition-delay: $i * 0.1s;
     }
 }

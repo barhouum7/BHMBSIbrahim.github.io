@@ -62,6 +62,32 @@
     transition: all 1s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 200px;
+      height: 200px;
+      margin-top: 30px;
+      background: url(../imgs/Tech/MyFace000.jpg) no-repeat;
+      border-radius: 50%;
+      border: solid 3px #eece1a; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
 
 * {
   box-sizing: border-box; }
@@ -97,13 +123,16 @@ main .sm-heading {
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
   cursor: pointer;
+  /* Added here transitions and animations 
+    to the Small heading's background Color */
   /* Old browsers */
   background: linear-gradient(to left, rgba(73, 73, 73, 0.5) 50%, #373737 50%);
   background-size: 1% 50%;
   background-position: right bottom;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
-  transition: all 1s ease-out; }
+  transition: all 1s ease-out;
+  /* Process Ended here .. */ }
   main .sm-heading:hover {
     background-position: left bottom;
     border: 1px solid #fff; }
@@ -114,7 +143,10 @@ main .lg-heading {
   transform: translate3d(0, 0, 0);
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
-  transition: all 1s ease-out; }
+  transition: all 1s ease-out;
+  /* Added here transition 
+    to the Large heading When Hovred On it */
+  /* Process Ended here .. */ }
   main .lg-heading:hover {
     position: fixed;
     transform: translateX(100px);
