@@ -70,6 +70,92 @@
             // Slide in From the top
             transform: translate3d(0, 0 ,0);
         }
+        
+        // ***** Links with filled stroke Effects ******
+        /* stroke */
+        &.stroke,
+        &.fill {
+            a {
+            position: relative;
+            }
+        }
+        
+        &.stroke,
+        &.fill {
+            a:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: '';
+            color: transparent;
+            background: #fff;
+            height: 1px;
+            }
+        }
+        &.stroke {
+            a:hover:after {
+            width: 100%;
+            }
+        }
+
+        &.fill {
+            a {
+            color: $secondary-color;
+            transition: all 2s;
+            }
+        }
+
+        &.fill {
+            a:after {
+            text-align: left;
+            content: '';
+            margin: 0;
+            opacity: 0;
+            }
+        }
+        
+        &.fill {
+            a:hover {
+            color: #fff;
+            z-index: 1;
+            }
+        }
+        &.fill {
+            a:hover:after {
+            z-index: -10;
+            animation: fill 1s forwards;
+            -webkit-animation: fill 1s forwards;
+            -moz-animation: fill 1s forwards;
+            opacity: 1;
+            }
+        }
+
+
+
+        /* Keyframes */
+        @keyframes fill {
+        0% {
+            width: 0%;
+            height: 1px;
+            background: $secondary-color;
+        }
+        50% {
+            width: 100%;
+            height: 1px;
+            background: $secondary-color;
+        }
+        100% {
+            width: 100%;
+            height: 100%;
+            background: rgba(lighten(#333, 10), .2);
+            border-radius: 100%;
+        }
+        }
+
+
     }
     // Branding side Now
     &-branding {
@@ -102,8 +188,8 @@
             // Slide in From Right
             transform: translate3d(0, 0, 0);
         }
-        &.current > a {
-            color: $secondary-color;
+        &.active > a {
+            color: #fff;
         }
     }
     .nav-link {
@@ -114,9 +200,7 @@
         padding: 1rem 0;
         font-weight: 300;
         color: #fff;
-        // &:hover {
-        //     color: $secondary-color;
-        // }
+        text-decoration: none;
     }
 
 }
