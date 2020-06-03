@@ -33,3 +33,24 @@ function toggleMenu() {
         showMenu = false
     }
 }
+
+// Changing a new color For the Active Page
+
+/* Get the first element of the nodelist for nav: */
+let menuClick = document.getElementsByClassName('menu-nav')[0]
+
+/* Attach an event listener
+(note: changeActive not changeActive()).
+This will use event delegation
+to catch the events
+that bubble up from the anchors. */
+menuClick.addEventListener('click', changeActive, false)
+/* Now Adding some Code to the function  */
+function changeActive(event) {
+    // Grab the active element
+    let active = this.querySelector('li.active')
+    // Remove the active class from that element
+    active.classList.remove('active')
+    // Add the active Class to the Current Clicked Element
+    event.target.parentNode.classList.add('active')
+}
