@@ -149,6 +149,14 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; } }
+
 * {
   box-sizing: border-box; }
 
