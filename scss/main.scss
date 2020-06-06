@@ -67,7 +67,7 @@ main {
 }
 
 a {
-  color: #fff;
+  color: setTextColor($primary-color);
   text-decoration: none;
 }
 
@@ -80,7 +80,7 @@ header {
 .secondary-text {
   color: $secondary-color;
   &:hover {
-    color: #fff;
+    color: setTextColor($primary-color);
     transition: all 2s ease-out;
     cursor: pointer;
   }
