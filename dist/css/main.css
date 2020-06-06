@@ -115,7 +115,7 @@
       width: 200px;
       height: 200px;
       margin-top: 30px;
-      background: url(../imgs/Tech/MyFace000-preview.png) no-repeat;
+      background: url(../imgs/Tech/myPortrait.png) no-repeat;
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -155,7 +155,31 @@
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url(../imgs/Tech/myPortrait-small.png) no-repeat;
+      width: 130px;
+      height: 130px;
+      margin: 5px auto; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }
