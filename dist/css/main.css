@@ -230,6 +230,7 @@ main .sm-heading {
     border: 1px solid #fff; }
 
 main .lg-heading {
+  position: absolute;
   font-size: 6rem;
   cursor: pointer;
   transform: translate3d(0, 0, 0);
@@ -308,3 +309,8 @@ main {
 
 .job-3 {
   grid-area: job3; }
+
+.job {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #eece1a 5px solid; }
