@@ -291,10 +291,14 @@ main {
   grid-template-columns: repeat(3, 1fr); }
 
 .bio-image {
-  grid-area: bioimage; }
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #eece1a 3px solid; }
 
 .bio {
-  grid-area: bio; }
+  grid-area: bio;
+  font-size: 1.5rem; }
 
 .job-1 {
   grid-area: job1; }
