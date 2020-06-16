@@ -274,12 +274,20 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
       main .icons a:hover {
         color: #eece1a;
         -webkit-transition: all 1s ease-out;
         -moz-transition: all 1s ease-out;
         transition: all 1s ease-out; }
+      main .icons a .fab {
+        transition: transform .5s;
+        /* Animation */ }
+        main .icons a .fab:hover {
+          transform: scale(1.5); }
   main#home {
     overflow: hidden; }
     main#home h1 {

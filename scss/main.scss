@@ -102,10 +102,17 @@ main {
 
     a {
       padding: 0.4rem;
+      @include easeOut();
 
       &:hover {
         color: $secondary-color;
         @include easeOut();
+      }
+      .fab {
+        transition: transform .5s; /* Animation */
+        &:hover {
+          transform: scale(1.5);
+        }
       }
     }
   }
