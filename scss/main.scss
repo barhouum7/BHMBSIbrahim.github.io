@@ -129,6 +129,9 @@ main {
 
 .bio-image {
   grid-area: bioimage;
+  width: 200px;
+  height: 200px;
+  background: $myBrand no-repeat;
   margin: auto;
   border-radius: 50%;
   border: $secondary-color 3px solid;
@@ -151,6 +154,10 @@ main {
 
 .job {
   background: lighten($primary-color, 5);
-  padding: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 5px;
   border-bottom: $secondary-color 5px solid;
+  background: #444;
+  box-shadow: inset 15px 15px 30px #494949, 
+              inset -5px -5px 30px #676767;
 }
