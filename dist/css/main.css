@@ -284,7 +284,7 @@ main {
         -moz-transition: all 1s ease-out;
         transition: all 1s ease-out; }
       main .icons a .fab {
-        transition: transform .5s;
+        transition: transform .3s;
         /* Animation */ }
         main .icons a .fab:hover {
           transform: scale(1.5); }

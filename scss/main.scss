@@ -109,7 +109,7 @@ main {
         @include easeOut();
       }
       .fab {
-        transition: transform .5s; /* Animation */
+        transition: transform .3s; /* Animation */
         &:hover {
           transform: scale(1.5);
         }
@@ -132,39 +132,38 @@ main {
     'bioimage bio bio'
     'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
-}
-
-.bio-image {
-  grid-area: bioimage;
-  width: 200px;
-  height: 200px;
-  background: $myBrand no-repeat;
-  margin: auto;
-  border-radius: 50%;
-  border: $secondary-color 3px solid;
-}
-
-.bio {
-  grid-area: bio;
-  font-size: 1.5rem;
-}
-
-.job-1 {
-  grid-area: job1;
-}
-.job-2 {
-  grid-area: job2;
-}
-.job-3 {
-  grid-area: job3;
-}
-
-.job {
-  background: lighten($primary-color, 5);
-  padding: 1.5rem;
-  border-radius: 5px;
-  border-bottom: $secondary-color 5px solid;
-  background: #444;
-  box-shadow: inset 15px 15px 30px #494949, 
-              inset -5px -5px 30px #676767;
+  .bio-image {
+    grid-area: bioimage;
+    width: 200px;
+    height: 200px;
+    background: $myBrand no-repeat;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+  
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+  
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-bottom: $secondary-color 5px solid;
+    background: #444;
+    box-shadow: inset 15px 15px 30px #494949, 
+                inset -5px -5px 30px #676767;
+  }
 }
