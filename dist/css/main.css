@@ -298,33 +298,34 @@ main {
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    width: 200px;
+    height: 200px;
+    background: url(../imgs/Tech/myPortrait.png) no-repeat;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #515151;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-bottom: #eece1a 5px solid;
+    background: #444;
+    box-shadow: inset 15px 15px 30px #494949,  inset -5px -5px 30px #676767; }
 
-.bio-image {
-  grid-area: bioimage;
-  width: 200px;
-  height: 200px;
-  background: url(../imgs/Tech/myPortrait.png) no-repeat;
-  margin: auto;
-  border-radius: 50%;
-  border: #eece1a 3px solid; }
-
-.bio {
-  grid-area: bio;
-  font-size: 1.5rem; }
-
-.job-1 {
-  grid-area: job1; }
-
-.job-2 {
-  grid-area: job2; }
-
-.job-3 {
-  grid-area: job3; }
-
-.job {
-  background: #515151;
-  padding: 1.5rem;
-  border-radius: 5px;
-  border-bottom: #eece1a 5px solid;
-  background: #444;
-  box-shadow: inset 15px 15px 30px #494949,  inset -5px -5px 30px #676767; }
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px; }

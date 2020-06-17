@@ -167,3 +167,11 @@ main {
                 inset -5px -5px 30px #676767;
   }
 }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: setTextColor($primary-color);
+  height: 60px;
+}
