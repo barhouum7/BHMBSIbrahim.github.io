@@ -145,6 +145,9 @@ main {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+    .text-secondary {
+      color: $secondary-color;
+    }
   }
   
   .job-1 {
@@ -171,7 +174,6 @@ main {
   text-align: center;
   padding: 1rem;
   background: darken($primary-color, 10);
-  color: setTextColor($primary-color);
   height: 60px;
 }
 
