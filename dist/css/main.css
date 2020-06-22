@@ -291,6 +291,21 @@ main {
     border-bottom: #eece1a 5px solid;
     box-shadow: inset 15px 15px 30px #494949,  inset -5px -5px 30px #676767; }
 
+/* WorkPage/Projects*/
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(4, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
