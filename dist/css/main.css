@@ -306,6 +306,15 @@ main {
       -moz-transition: all 1s ease-out;
       transition: all 1s ease-out; }
 
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover {
+    background: #eece1a;
+    color: #000; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;

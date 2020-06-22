@@ -184,7 +184,18 @@ main {
       @include easeOut;
     }
   }
+}
 
+// Buttons Styles
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: setTextColor($secondary-color);
+  }
 }
 
 #main-footer {
