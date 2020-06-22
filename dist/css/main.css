@@ -306,14 +306,22 @@ main {
       -moz-transition: all 1s ease-out;
       transition: all 1s ease-out; }
 
-.btn {
+.btn, .btn-dark, .btn-light {
   display: inline-block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover {
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #eece1a;
     color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
 
 #main-footer {
   text-align: center;
