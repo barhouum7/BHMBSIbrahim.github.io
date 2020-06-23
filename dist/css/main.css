@@ -372,6 +372,14 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 400px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      font-size: 3rem; }
+    main .not-heading {
+      margin-top: 15rem;
+      font-size: .5rem; }
   main#home h1 {
     margin-top: 10vh; }
   .projects {
