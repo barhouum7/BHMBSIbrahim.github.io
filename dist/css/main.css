@@ -295,7 +295,7 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
@@ -307,7 +307,8 @@ main {
       transition: all 1s ease-out; }
 
 .btn, .btn-dark, .btn-light {
-  display: inline-block;
+  display: block;
+  text-align: center;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
@@ -328,6 +329,14 @@ main {
   padding: 1rem;
   background: #2b2b2b;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -358,8 +367,12 @@ main {
       margin: 5px auto; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
