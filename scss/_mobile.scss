@@ -1,11 +1,22 @@
 // WideScreens
 @include mediaXl {
+    main {
+        .home-info {
+            margin-top: 23rem;
+            width: 20%;
+        }
+    }
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 // Desktops & Laptops
 @include mediaLg {
+    main {
+        .home-info {
+            width: 50%;
+        }
+    }
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -18,7 +29,11 @@
 
         .lg-heading {
             line-height: 1;
-            margin-bottom: 1rem;
+            font-size: 7rem;
+        }
+
+        .home-info {
+            width: 100%;
         }
     }
 
@@ -70,12 +85,12 @@
         align-items: center;
         text-align: center;
         .lg-heading {
-            font-size: 3rem;
+            font-size: 5rem;
         }
 
-        .not-heading {
-            margin-top: 15rem;
-            font-size: .5rem;
+        .home-info {
+            font-size: .6rem;
+            width: 100%;
         }
     }
 
