@@ -126,6 +126,10 @@ header {
   }
 }
 
+.text-secondary {
+  color: $secondary-color;
+}
+
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -146,9 +150,6 @@ header {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
-    .text-secondary {
-      color: $secondary-color;
-    }
   }
   
   .job-1 {
@@ -186,6 +187,34 @@ header {
     }
   }
 }
+
+/* Contact Page */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  
+  div {
+    font-size: 2rem;
+    border: 3px white solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: SetTextColor($secondary-color);
+      cursor: pointer;
+      span {
+        color: setTextColor($secondary-color);
+      }
+    }
+  }
+}
+
 
 // Buttons Styles
 .btn {
