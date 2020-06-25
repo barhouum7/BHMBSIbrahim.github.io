@@ -137,6 +137,7 @@ header {
     'bioimage bio bio'
     'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
+  margin: 3rem;
   .bio-image {
     grid-area: bioimage;
     width: 200px;

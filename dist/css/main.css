@@ -266,7 +266,8 @@ header {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem; }
   .about-info .bio-image {
     grid-area: bioimage;
     width: 200px;
@@ -364,7 +365,7 @@ header {
   main .home-info {
     width: 50%; }
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
