@@ -247,6 +247,23 @@ header {
   padding: 1rem;
   background: darken($primary-color, 10);
   height: 60px;
+
+  .my-signature {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    color: $secondary-color;
+    .love-mark {
+      color: red;
+    }
+    a {
+      color: gray;
+      &:hover {
+        color: rgba(lighten(red, 30), 40);
+        @include easeOut;
+      }
+    }
+  }
 }
 
 @import 'mobile';

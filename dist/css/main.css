@@ -353,6 +353,20 @@ header {
   padding: 1rem;
   background: #2b2b2b;
   height: 60px; }
+  #main-footer .my-signature {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    color: #eece1a; }
+    #main-footer .my-signature .love-mark {
+      color: red; }
+    #main-footer .my-signature a {
+      color: gray; }
+      #main-footer .my-signature a:hover {
+        color: #ff9999;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        transition: all 1s ease-out; }
 
 @media screen and (min-width: 1441px) {
   main .home-info {
