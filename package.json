@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/barhouum7/MyPortfolio-Website.github.io#readme",
   "dependencies": {
-    "node-sass": "^4.14.0"
+    "node-sass": "^4.14.0",
+    "yargs-parser": "^20.2.1"
   }
 }
