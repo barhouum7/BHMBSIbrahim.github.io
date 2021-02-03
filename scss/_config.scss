@@ -1,4 +1,4 @@
-$primary-color: #444;
+$primary-color: rgb(40, 61, 75);
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../imgs/Tech/CyberpunkAesthetic.gif);
@@ -19,7 +19,7 @@ $background-opacity: 0.9;
       background: $home-image no-repeat;
       background-attachment: fixed;
       background-size: cover;
-      
+
       &:after {
         content: '';
         position: fixed;
@@ -38,7 +38,9 @@ $background-opacity: 0.9;
 @function setTextColor($color) {
   @if (lightness($color) > 40) {
     @return #000;
-  } @else {
+  }
+
+  @else {
     @return #fff;
   }
 }
