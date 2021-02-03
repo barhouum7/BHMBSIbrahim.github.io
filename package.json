@@ -4,7 +4,7 @@
   "description": "Responsive Portfolio Website For My Projects",
   "main": "index.js",
   "scripts": {
-    "mySass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "mySass": "sass --watch scss/:dist/css/"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/barhouum7/MyPortfolio-Website.github.io#readme",
   "dependencies": {
-    "node-sass": "^4.14.0",
+    "sass": "^1.32.6",
     "yargs-parser": "^20.2.1"
   }
 }
