@@ -268,33 +268,34 @@ main .home-info .sm-heading:hover {
   background-position: left bottom;
   border: 1px solid #fff;
 }
-main .home-info .icons {
-  margin-top: 1rem;
-}
-main .home-info .icons a {
-  padding: 0.4rem;
-  -webkit-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-}
-main .home-info .icons a:hover {
-  color: #eece1a;
-  -webkit-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-}
-main .home-info .icons a .fab {
-  transition: transform 0.3s;
-  /* Animation */
-}
-main .home-info .icons a .fab:hover {
-  transform: scale(1.5);
-}
 main#home {
   overflow: hidden;
 }
 main#home h1 {
   margin-top: 10vh;
+}
+
+.icons {
+  margin-top: 1rem;
+}
+.icons a {
+  padding: 0.4rem;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.icons a:hover {
+  color: #eece1a;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.icons a .fab {
+  transition: transform 0.3s;
+  /* Animation */
+}
+.icons a .fab:hover {
+  transform: scale(1.5);
 }
 
 a {

@@ -80,29 +80,6 @@ main {
 
       /* Process Ended here .. */
     }
-
-    .icons {
-      margin-top: 1rem;
-
-      a {
-        padding: 0.4rem;
-        @include easeOut();
-
-        &:hover {
-          color: $secondary-color;
-          @include easeOut();
-        }
-
-        .fab {
-          transition: transform .3s;
-
-          /* Animation */
-          &:hover {
-            transform: scale(1.5);
-          }
-        }
-      }
-    }
   }
 
   &#home {
@@ -113,6 +90,29 @@ main {
     }
   }
 
+}
+
+.icons {
+  margin-top: 1rem;
+
+  a {
+    padding: 0.4rem;
+    @include easeOut();
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+    }
+
+    .fab {
+      transition: transform .3s;
+
+      /* Animation */
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
 }
 
 // End of main Class
