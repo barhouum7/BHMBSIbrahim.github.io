@@ -1,7 +1,6 @@
 @import 'config';
 @import 'menu';
 
-
 * {
   box-sizing: border-box;
 }
@@ -18,7 +17,9 @@ body {
 
 // Let's Style The Headings
 
-h1, h2, h3  {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400;
 }
@@ -29,7 +30,7 @@ main {
   display: grid;
   // height: 100%;
   min-height: calc(100vh - 60px);
-  
+
   .lg-heading {
     position: absolute;
     padding: 1rem;
@@ -37,7 +38,8 @@ main {
     cursor: pointer;
     transform: translate3d(0, 0, 0);
     @include easeOut;
-        /* Added here transition 
+
+    /* Added here transition 
     to the Large heading When Hovred On it */
     &:hover {
       transform: translateX(100px);
@@ -46,65 +48,74 @@ main {
       transition: all 1s ease-out;
       color: $secondary-color;
     }
+
     /* Process Ended here .. */
   }
 
-  
-    .home-info {
-      width: 45%;
-      margin-top: 15rem;
-      padding: 1rem;
-      
-      .sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        border-bottom-right-radius: 20px;
-        border-top-left-radius: 20px;
-        cursor: pointer;
-        /* Added here transitions and animations 
+
+  .home-info {
+    width: 45%;
+    margin-top: 15rem;
+    padding: 1rem;
+
+    .sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+      border: 1px solid $primary-color;
+      border-bottom-right-radius: 20px;
+      border-top-left-radius: 20px;
+      cursor: pointer;
+      /* Added here transitions and animations 
         to the Small heading's background Color */
-        /* Old browsers */
-        background: linear-gradient(to left, $smallHeading-BgColor 50%, rgba(darken($primary-color, 5), 5) 50%);
-        background-size: 1% 50%;
-        background-position: right bottom;
-        @include easeOut;
-        
+      /* Old browsers */
+      background: linear-gradient(to left, $smallHeading-BgColor 50%, rgba(darken($primary-color, 5), 5) 50%);
+      background-size: 1% 50%;
+      background-position: right bottom;
+      @include easeOut;
+
+      &:hover {
+        background-position: left bottom;
+        border: 1px solid #fff;
+      }
+
+      /* Process Ended here .. */
+    }
+
+    .icons {
+      margin-top: 1rem;
+
+      a {
+        padding: 0.4rem;
+        @include easeOut();
+
         &:hover {
-          background-position: left bottom;
-          border: 1px solid #fff;
-        }
-        /* Process Ended here .. */
-      }
-
-      .icons {
-        margin-top: 1rem;
-  
-        a {
-          padding: 0.4rem;
+          color: $secondary-color;
           @include easeOut();
-  
+        }
+
+        .fab {
+          transition: transform .3s;
+
+          /* Animation */
           &:hover {
-            color: $secondary-color;
-            @include easeOut();
-          }
-          .fab {
-            transition: transform .3s; /* Animation */
-            &:hover {
-              transform: scale(1.5);
-            }
+            transform: scale(1.5);
           }
         }
       }
     }
-    
-    &#home {
-      overflow: hidden;
-      h1 {
-        margin-top: 10vh;
-      }
-    }
+  }
 
-} // End of main Class
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 10vh;
+    }
+  }
+
+}
+
+// End of main Class
 
 a {
   color: setTextColor($primary-color);
@@ -119,6 +130,7 @@ header {
 
 .secondary-text {
   color: $secondary-color;
+
   &:hover {
     color: setTextColor($primary-color);
     transition: all 2s ease-out;
@@ -138,49 +150,119 @@ header {
     'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
   margin: 3rem;
+
   .bio-image {
     grid-area: bioimage;
     width: 200px;
     height: 200px;
     background: $myBrand no-repeat;
-    margin: auto;
+    // margin: auto;
+    margin-top: 5rem;
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
-  
+
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
   }
-  
+
   .job-1 {
     grid-area: job1;
   }
+
   .job-2 {
     grid-area: job2;
   }
+
   .job-3 {
     grid-area: job3;
   }
-  
+
   .job {
     background: $primary-color;
     padding: 1.5rem;
     border-radius: 5px;
     border-bottom: $secondary-color 5px solid;
-    box-shadow: inset 15px 15px 30px #494949, 
-                inset -5px -5px 30px #676767;
+    box-shadow: -5px 5px 5px rgba($secondary-color, 0.3),
+      inset -10px 10px 50px #676767;
+    @include easeOut;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-color;
+      padding: 1.5rem;
+      border-radius: 5px;
+      border-bottom: $primary-color 5px solid;
+      box-shadow: none;
+      @include easeOut;
+    }
+
+    p {
+      font-size: small;
+      font-family: serif;
+    }
+
+    h3 {
+      text-transform: capitalize;
+      color: $secondary-color;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    &.job-2 {
+      p {
+        font-size: medium;
+      }
+    }
+
+    &.job-3 {
+      p {
+        font-size: medium;
+      }
+
+      .links {
+        a {
+          padding: .5rem;
+          background: #676767;
+          border-radius: 5%;
+          font-weight: 700;
+
+          &:hover {
+            padding: none;
+            background: none;
+            color: $secondary-color;
+            font-weight: 700;
+            @include easeOut;
+          }
+        }
+
+        // margin-left: 5px;
+        word-spacing: 1vw;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
   }
 }
 
 /* WorkPage/Projects*/
+.work-page {
+  padding: 0 10rem 1rem 10rem
+}
+
+.about-page {
+  padding: 0 10rem 1rem 10rem;
+}
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
+
   img {
     width: 100%;
     border: 3px #fff solid;
+
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
@@ -196,7 +278,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
-  
+
   div {
     font-size: 2rem;
     border: 3px white solid;
@@ -209,6 +291,7 @@ header {
       background: $secondary-color;
       color: SetTextColor($secondary-color);
       cursor: pointer;
+
       span {
         color: setTextColor($secondary-color);
       }
@@ -224,6 +307,7 @@ header {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+
   &:hover {
     background: $secondary-color;
     color: setTextColor($secondary-color);
@@ -253,11 +337,14 @@ header {
     font-style: italic;
     font-size: 14px;
     color: $secondary-color;
+
     .love-mark {
       color: red;
     }
+
     a {
       color: gray;
+
       &:hover {
         color: rgba(lighten(red, 30), 40);
         @include easeOut;

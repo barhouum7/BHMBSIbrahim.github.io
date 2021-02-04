@@ -34,7 +34,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 }
 .menu.show {
@@ -51,6 +50,7 @@
   overflow: hidden;
 }
 .menu-nav {
+  opacity: 0.9;
   margin: 0;
   padding: 0;
   background: #1f2f3a;
@@ -125,7 +125,7 @@
 .menu-branding {
   margin: 0;
   padding: 0;
-  background: #283d4b;
+  background: rgba(40, 61, 75, 0.9);
   transform: translate3d(0, 100%, 0);
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
@@ -139,6 +139,7 @@
   height: 200px;
   margin-top: 30px;
   background: url(../imgs/Tech/myPortrait.png) no-repeat;
+  background-color: #1f2f3a;
   border-radius: 50%;
   border: solid 3px #eece1a;
 }
@@ -209,7 +210,9 @@ body#bg-image:after {
   background: rgba(40, 61, 75, 0.9);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400;
 }
@@ -246,11 +249,12 @@ main .home-info {
 main .home-info .sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
+  border: 1px solid #283d4b;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
   cursor: pointer;
   /* Added here transitions and animations 
-  to the Small heading's background Color */
+    to the Small heading's background Color */
   /* Old browsers */
   background: linear-gradient(to left, rgba(44, 66, 82, 0.5) 50%, #1f2f3a 50%);
   background-size: 1% 50%;
@@ -329,7 +333,7 @@ header {
   width: 200px;
   height: 200px;
   background: url(../imgs/Tech/myPortrait.png) no-repeat;
-  margin: auto;
+  margin-top: 5rem;
   border-radius: 50%;
   border: #eece1a 3px solid;
 }
@@ -351,10 +355,67 @@ header {
   padding: 1.5rem;
   border-radius: 5px;
   border-bottom: #eece1a 5px solid;
-  box-shadow: inset 15px 15px 30px #494949, inset -5px -5px 30px #676767;
+  box-shadow: -5px 5px 5px rgba(238, 206, 26, 0.3), inset -10px 10px 50px #676767;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+.about-info .job:hover {
+  background: #283d4b;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border-bottom: #283d4b 5px solid;
+  box-shadow: none;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.about-info .job p {
+  font-size: small;
+  font-family: serif;
+}
+.about-info .job h3 {
+  text-transform: capitalize;
+  color: #eece1a;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.about-info .job.job-2 p {
+  font-size: medium;
+}
+.about-info .job.job-3 p {
+  font-size: medium;
+}
+.about-info .job.job-3 .links {
+  word-spacing: 1vw;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.about-info .job.job-3 .links a {
+  padding: 0.5rem;
+  background: #676767;
+  border-radius: 5%;
+  font-weight: 700;
+}
+.about-info .job.job-3 .links a:hover {
+  padding: none;
+  background: none;
+  color: #eece1a;
+  font-weight: 700;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
 /* WorkPage/Projects*/
+.work-page {
+  padding: 0 10rem 1rem 10rem;
+}
+
+.about-page {
+  padding: 0 10rem 1rem 10rem;
+}
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -460,6 +521,11 @@ header {
   main .home-info {
     width: 50%;
   }
+  main .job-3 .links {
+    text-align: center;
+    margin-left: 0;
+    line-height: 3;
+  }
 
   .projects {
     grid-template-columns: repeat(4, 1fr);
@@ -476,6 +542,9 @@ header {
   }
   main .home-info {
     width: 100%;
+  }
+  main .job-3 .links {
+    margin-left: 0;
   }
 
   ul.menu-nav,
@@ -526,6 +595,9 @@ div.menu-branding.show {
   main .home-info {
     font-size: 0.6rem;
     width: 100%;
+  }
+  main .job-3 .links {
+    margin-left: 0;
   }
 
   main#home h1 {

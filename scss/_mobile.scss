@@ -6,21 +6,33 @@
             width: 20%;
         }
     }
+
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 // Desktops & Laptops
 @include mediaLg {
     main {
         .home-info {
             width: 50%;
         }
+
+        .job-3 {
+            .links {
+                text-align: center;
+                margin-left: 0;
+                line-height: 3;
+            }
+        }
     }
+
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 // Tablets & Small Laptops
 @include mediaMd {
     main {
@@ -35,6 +47,12 @@
         .home-info {
             width: 100%;
         }
+
+        .job-3 {
+            .links {
+                margin-left: 0;
+            }
+        }
     }
 
     ul.menu-nav,
@@ -44,19 +62,19 @@
         min-height: 0;
 
         &.show {
-            transform: translate3d(0,0,0);
+            transform: translate3d(0, 0, 0);
         }
     }
 
     .menu-nav {
         height: 75vh;
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%, 0, 0);
         font-size: 24px;
     }
 
     .menu-branding {
         height: 25vh;
-        transform: translate3d(100%,0,0);
+        transform: translate3d(100%, 0, 0);
 
         .portrait {
             background: $myBrand_small no-repeat;
@@ -65,13 +83,14 @@
             margin: 5px auto;
         }
     }
+
     .about-info {
-        grid-template-areas: 
-        'bioimage'
-        'bio'
-        'job1'
-        'job2'
-        'job3';
+        grid-template-areas:
+            'bioimage'
+            'bio'
+            'job1'
+            'job2'
+            'job3';
         grid-template-columns: 1fr;
     }
 
@@ -79,11 +98,13 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 // Smartphones
 @include mediaSm {
     main {
         align-items: center;
         text-align: center;
+
         .lg-heading {
             font-size: 5rem;
         }
@@ -91,6 +112,12 @@
         .home-info {
             font-size: .6rem;
             width: 100%;
+        }
+
+        .job-3 {
+            .links {
+                margin-left: 0;
+            }
         }
     }
 
