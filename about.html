@@ -54,7 +54,7 @@
         </nav>
     </header>
 
-    <div class="work-page">
+    <div class="about-page">
     <main id="about">
         <h1 class="lg-heading">
             <span class="primary-text">About</span> <span class="secondary-text">Me</span>
@@ -62,9 +62,11 @@
 
         <div class="about-info">
             <!-- <img src="dist/imgs/tech/myPortrait.png" alt="BHMBS Ibrahim Portrait" class="bio-image"> -->
-            <div class="bio-image"></div>
+            <div class="bio-image">
+                <img src="https://camo.githubusercontent.com/5b2cde573a6ae2ab74d3c366e1deffde0e56ddbc8ba1fee6f022342a421c4c2f/68747470733a2f2f692e696d6775722e636f6d2f4245553043356f2e706e67" data-canonical-src="https://camo.githubusercontent.com/5b2cde573a6ae2ab74d3c366e1deffde0e56ddbc8ba1fee6f022342a421c4c2f/68747470733a2f2f692e696d6775722e636f6d2f4245553043356f2e706e67"
+                            alt="coverImg" height="300px"/><br>
+            </div>
             <div class="bio">
-                
                 <div align="center">
                     <h2 class="text-secondary">Hi there 👋</h2>
                     <h3 ><img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
@@ -83,19 +85,16 @@
                         href="https://github.com/barhouum7?original_referer=https%3A%2F%2Fgithub.com%2Fbarhouum7&screen_name=barhouum7"><img
                             src="https://img.shields.io/github/followers/barhouum7?color=1DA1F2&logo=github&style=for-the-badge"></a>
                 </p>
-
-                <p align="center">
-                    <img src="https://camo.githubusercontent.com/5b2cde573a6ae2ab74d3c366e1deffde0e56ddbc8ba1fee6f022342a421c4c2f/68747470733a2f2f692e696d6775722e636f6d2f4245553043356f2e706e67" data-canonical-src="https://camo.githubusercontent.com/5b2cde573a6ae2ab74d3c366e1deffde0e56ddbc8ba1fee6f022342a421c4c2f/68747470733a2f2f692e696d6775722e636f6d2f4245553043356f2e706e67"
-                        alt="coverImg" /><br>
-                    <strong>I am a student currently pursuing a Bachelor's degree in Computer Science at the Higher
-                        Institute of Technological Studies of Tunisia. Experienced in Web Development using the most
-                        recent technologies, Linux System Administration, and Computer Networking. Also, I'm a
-                        Self-taught Programmer and I love the open-source world and try my best to contribute to
-                        it!</strong>
-                </p><br>
-                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit saepe nostrum aliquam dicta,
-                    odio nihil sequi voluptatibus eum ipsam. Perspiciatis dolores eaque, possimus voluptas expedita
-                    voluptate praesentium illo recusandae accusamus!</p> -->
+                <div class="about-me">
+                    <p>
+                        <strong>I am a student currently pursuing a Bachelor's degree in Computer Science at the Higher
+                            Institute of Technological Studies of Tunisia. Experienced in Web Development using the most
+                            recent technologies, Linux System Administration, and Computer Networking. Also, I'm a
+                            Self-taught Programmer and I love the open-source world and try my best to contribute to
+                            it!</strong>
+                    </p>
+                </div>
+                
             </div>
             <div class="job job-1">
                 <h3>freelancer as a MERN stack JS developer</h3>
@@ -118,23 +117,41 @@
     </main>
 </div>
 
-    <footer id="main-footer">
-        <div>
-            <span class="my-signature">&COPY;2020 Made With <span class="love-mark">❤</span> &nbsp; By <a
-                    href="https://github.com/barhouum7" target="_blank">GitHub/barhouum7</a>.</span>
-            <span class="icons">
-                <a class="twitter" href="https://twitter.com/mindh4q3rr" target="_blank">
-                    <i class="fab fa-twitter fa-2x"></i>
-                    </a>
-                    <a class="linkedin" href="https://www.linkedin.com/in/ibrahimbs/" target="_blank">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                    <a class="github" href="https://www.github.com/barhouum7/" target="_blank">
-                    <i class="fab fa-github fa-2x"></i>
-                    </a>
-            </span>
-        </div>
-    </footer>
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+    
+    <div w3-include-html="footer.html"></div> 
+
+    <script>
+    includeHTML();
+    </script>
     <script src="dist/js/main.js"></script>
 </body>
 
