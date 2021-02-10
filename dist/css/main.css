@@ -344,7 +344,6 @@ header {
   width: 200px;
   height: 200px;
   background: url(../imgs/Tech/myPortrait.png) no-repeat;
-  margin-top: 5rem;
   border-radius: 50%;
   border: #eece1a 3px solid;
 }
@@ -426,6 +425,16 @@ header {
 .about-page {
   padding: 0 10rem 1rem 10rem;
 }
+.about-page .about-me {
+  margin-top: 80px;
+  text-align: center;
+}
+.about-page .bio-image {
+  display: flex;
+}
+.about-page .bio-image img {
+  margin-top: 250px;
+}
 
 .projects {
   display: grid;
@@ -437,6 +446,17 @@ header {
   border: 3px #fff solid;
 }
 .projects img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.projects video {
+  width: 100%;
+  border: 3px #fff solid;
+}
+.projects video:hover {
   opacity: 0.5;
   border-color: #eece1a;
   -webkit-transition: all 1s ease-out;
