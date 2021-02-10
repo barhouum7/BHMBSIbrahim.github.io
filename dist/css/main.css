@@ -189,7 +189,6 @@
 body {
   background-color: #283d4b;
   color: #fff;
-  height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
@@ -335,7 +334,7 @@ header {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "opnS aboutme aboutme" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
   margin: 3rem;
 }
@@ -350,6 +349,14 @@ header {
 .about-info .bio {
   grid-area: bio;
   font-size: 1.5rem;
+}
+.about-info .about-me {
+  grid-area: aboutme;
+  font-size: 1.5rem;
+}
+.about-info .opnS {
+  grid-area: opnS;
+  margin-top: 25px;
 }
 .about-info .job-1 {
   grid-area: job1;
@@ -422,18 +429,16 @@ header {
   padding: 0 10rem 1rem 10rem;
 }
 
+.contact-page {
+  padding: 0 10rem 1rem 10rem;
+}
+
 .about-page {
   padding: 0 10rem 1rem 10rem;
 }
 .about-page .about-me {
   margin-top: 80px;
   text-align: center;
-}
-.about-page .bio-image {
-  display: flex;
-}
-.about-page .bio-image img {
-  margin-top: 250px;
 }
 
 .projects {
@@ -566,10 +571,11 @@ header {
 }
 
 #main-footer {
+  position: absolute;
   text-align: center;
   padding: 1rem;
   background: #16222a;
-  height: 60px;
+  min-height: fit-content;
 }
 #main-footer .my-signature {
   font-weight: bold;
@@ -593,7 +599,24 @@ header {
 @media screen and (min-width: 1441px) {
   main .home-info {
     margin-top: 23rem;
-    width: 20%;
+  }
+
+  .about-page {
+    zoom: 90%;
+    padding-left: 5rem;
+  }
+  .about-page .about-info {
+    grid-template-areas: "bioimage bio bio" "opnS aboutme aboutme" "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-page .about-info .opnS {
+    margin-top: 0;
+  }
+  .about-page .about-info .bio-image {
+    margin-left: 4rem;
+  }
+  .about-page .about-info .about-me {
+    margin-top: 0;
   }
 
   .projects {
@@ -601,8 +624,11 @@ header {
   }
 }
 @media screen and (max-width: 1440px) {
-  main .home-info {
-    width: 50%;
+  main .sm-heading {
+    width: 50vw;
+  }
+  main .lg-heading {
+    font-size: 5.5rem;
   }
   main .job-3 .links {
     text-align: center;
@@ -610,18 +636,59 @@ header {
     line-height: 3;
   }
 
+  .about-page {
+    zoom: 90%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .about-page .about-info {
+    grid-template-areas: "bioimage bio bio" "opnS aboutme aboutme" "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-page .about-info .opnS {
+    margin-top: 0;
+  }
+  .about-page .about-info .bio-image {
+    margin-left: 4rem;
+  }
+  .about-page .about-info .about-me {
+    margin-top: 0;
+  }
+
   .projects {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  footer div {
+    width: 60%;
   }
 }
 @media screen and (max-width: 768px) {
   main {
-    align-items: center;
+    align-content: center;
     text-align: center;
   }
   main .lg-heading {
     line-height: 1;
-    font-size: 7rem;
+    font-size: 6rem;
+    margin-right: 5rem;
+  }
+  main .sm-heading {
+    width: 100%;
+  }
+  main .boxes {
+    margin-top: 5rem;
+  }
+  main .projects {
+    margin-top: 5rem;
+  }
+  main .about-info {
+    margin-top: 5rem;
   }
   main .home-info {
     width: 100%;
@@ -658,9 +725,47 @@ div.menu-branding.show {
     margin: 5px auto;
   }
 
-  .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+  footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  footer div {
+    width: 60%;
+  }
+
+  .contact-page {
+    padding-left: 7rem;
+    zoom: 50%;
+  }
+
+  .work-page {
+    padding-left: 11rem;
+    zoom: 50%;
+  }
+
+  .home-page {
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+    zoom: 70%;
+  }
+
+  .about-page {
+    zoom: 50%;
+  }
+  .about-page .about-info {
+    grid-template-areas: "bioimage" "bio" "opnS" "aboutme" "job1" "job2" "job3";
     grid-template-columns: 1fr;
+  }
+  .about-page .about-info .opnS {
+    margin-top: 0;
+  }
+  .about-page .about-info .bio-image {
+    margin-left: 15rem;
+  }
+  .about-page .about-info .about-me {
+    margin-top: 0;
   }
 
   .projects {

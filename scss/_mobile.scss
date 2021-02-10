@@ -3,7 +3,32 @@
     main {
         .home-info {
             margin-top: 23rem;
-            width: 20%;
+        }
+    }
+
+    .about-page {
+        zoom: 90%;
+        padding-left: 5rem;
+
+        .about-info {
+            grid-template-areas:
+                'bioimage bio bio'
+                'opnS aboutme aboutme'
+                'job1 job2 job3';
+            grid-template-columns: repeat(3, 1fr);
+
+            .opnS {
+                margin-top: 0;
+                // margin-left: 4rem;
+            }
+
+            .bio-image {
+                margin-left: 4rem;
+            }
+
+            .about-me {
+                margin-top: 0;
+            }
         }
     }
 
@@ -15,8 +40,12 @@
 // Desktops & Laptops
 @include mediaLg {
     main {
-        .home-info {
-            width: 50%;
+        .sm-heading {
+            width: 50vw;
+        }
+
+        .lg-heading {
+            font-size: 5.5rem;
         }
 
         .job-3 {
@@ -28,20 +57,74 @@
         }
     }
 
+    .about-page {
+        zoom: 90%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        .about-info {
+            grid-template-areas:
+                'bioimage bio bio'
+                'opnS aboutme aboutme'
+                'job1 job2 job3';
+            grid-template-columns: repeat(3, 1fr);
+
+            .opnS {
+                margin-top: 0;
+                // margin-left: 4rem;
+            }
+
+            .bio-image {
+                margin-left: 4rem;
+            }
+
+            .about-me {
+                margin-top: 0;
+            }
+        }
+    }
+
     .projects {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    footer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        div {
+            width: 60%;
+        }
     }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
     main {
-        align-items: center;
+        align-content: center;
         text-align: center;
 
         .lg-heading {
             line-height: 1;
-            font-size: 7rem;
+            font-size: 6rem;
+            margin-right: 5rem;
+        }
+
+        .sm-heading {
+            width: 100%;
+        }
+
+        .boxes {
+            margin-top: 5rem;
+        }
+
+        .projects {
+            margin-top: 5rem;
+        }
+
+        .about-info {
+            margin-top: 5rem;
         }
 
         .home-info {
@@ -84,14 +167,60 @@
         }
     }
 
-    .about-info {
-        grid-template-areas:
-            'bioimage'
-            'bio'
-            'job1'
-            'job2'
-            'job3';
-        grid-template-columns: 1fr;
+    footer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        div {
+            width: 60%;
+        }
+    }
+
+    .contact-page {
+        padding-left: 7rem;
+        zoom: 50%;
+    }
+
+    .work-page {
+        padding-left: 11rem;
+        zoom: 50%;
+    }
+
+    .home-page {
+        display: flex;
+        justify-content: center;
+        padding-top: 6rem;
+        zoom: 70%;
+    }
+
+    .about-page {
+        zoom: 50%;
+
+
+        .about-info {
+            grid-template-areas:
+                'bioimage'
+                'bio'
+                'opnS'
+                'aboutme'
+                'job1'
+                'job2'
+                'job3';
+            grid-template-columns: 1fr;
+
+            .opnS {
+                margin-top: 0;
+            }
+
+            .bio-image {
+                margin-left: 15rem;
+            }
+
+            .about-me {
+                margin-top: 0;
+            }
+        }
     }
 
     .projects {
