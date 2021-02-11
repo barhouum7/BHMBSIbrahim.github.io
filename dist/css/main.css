@@ -735,8 +735,8 @@ div.menu-branding.show {
   }
 
   .contact-page {
-    padding-left: 7rem;
-    zoom: 50%;
+    padding-left: 10rem;
+    zoom: 75%;
   }
 
   .work-page {
@@ -786,6 +786,11 @@ div.menu-branding.show {
   }
   main .job-3 .links {
     margin-left: 0;
+  }
+
+  .contact-page {
+    padding-left: 7rem;
+    zoom: 50%;
   }
 
   main#home h1 {
