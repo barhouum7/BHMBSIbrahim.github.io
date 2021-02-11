@@ -6,7 +6,7 @@
 }
 
 body {
-  @include background;
+  // @include background;
   background-color: $primary-color;
   color: setTextColor($primary-color);
   margin: 0;
@@ -116,6 +116,8 @@ main {
 #home {
   video {
     position: absolute;
+    background-attachment: fixed;
+    background-size: cover;
     top: 0;
     left: 0;
     width: 100%;
