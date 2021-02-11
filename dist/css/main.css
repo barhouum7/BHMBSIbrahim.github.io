@@ -789,8 +789,10 @@ div.menu-branding.show {
   }
 
   .contact-page {
-    padding-left: 4rem;
-    zoom: 80%;
+    padding-left: 7rem;
+    height: 200vh;
+    width: 100%;
+    zoom: 50%;
   }
 
   main#home h1 {
