@@ -25,6 +25,42 @@ h3 {
 
 $smallHeading-BgColor: rgba(lighten($primary-color, 2), 0.5);
 
+.sec-modal-content {
+
+  .sec-modal-body {
+    z-index: 90000;
+    text-align: center;
+
+    h1 {
+      font-weight: 900;
+      font-size: 2.3em;
+      text-transform: uppercase;
+    }
+
+    a.pre-order-btn {
+      color: #000;
+      background-color: gold;
+      border-radius: 1em;
+      padding: 1em;
+      display: block;
+      margin: 2em auto;
+      width: 50%;
+      font-size: 1.25em;
+      font-weight: 6600;
+      margin-bottom: 10px;
+
+      &:hover {
+        background-color: #000;
+        text-decoration: none;
+        color: gold;
+      }
+    }
+
+
+  }
+
+}
+
 main {
   display: grid;
   min-height: calc(100vh - 60px);
